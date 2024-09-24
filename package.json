@@ -1,0 +1,83 @@
+{
+  "name": "fathom",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8000",
+  "dependencies": {
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "d3": "^6.2.0",
+    "fbgraph": "^1.4.4",
+    "firebase": "^8.10.0",
+    "firebase-admin": "^9.9.0",
+    "firebase-functions": "^3.11.0",
+    "install": "^0.13.0",
+    "mathjs": "^9.3.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-ace": "^9.4.3",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.1",
+    "react-firebase-hooks": "^2.2.0",
+    "react-google-login": "^5.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-router-sitemap": "^1.2.0",
+    "react-scripts": "^4.0.2",
+    "react-select": "^4.0.2",
+    "react-switch": "^6.0.0",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=prod HTTPS=true react-scripts start",
+    "start-google": "cross-env NODE_ENV=prod react-scripts start",
+    "server": "cd api && docker-compose up --build",
+    "old-server": "firebase emulators:start --import=./functions/fathom-8cdfe/fathom-8cdfe",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run cache && npm run build-sitemap && npm run build && firebase deploy --only hosting",
+    "cache": "node ./src/cacheBenchmarks",
+    "build-sitemap": "npx babel-node buildSitemap.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/register": "^7.13.16",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.14.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-app": "^6.2.2",
+    "prettier": "^2.2.1"
+  }
+}

@@ -1,0 +1,12 @@
+FROM python:3.9.6-slim-buster
+LABEL maintainer="Mike Taylor <m.taylor@ladder.io"
+
+ENV INSTALL_PATH /fathom
+WORKDIR $INSTALL_PATH
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD gunicorn -b 0.0.0.0:8080 --timeout 0 --access-logfile - "fathom.app:create_app()"

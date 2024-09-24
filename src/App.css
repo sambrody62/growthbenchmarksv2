@@ -1,0 +1,284 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Frank";
+  src: url("./fonts/Frank.otf") format("opentype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+
+html,
+body,
+#root {
+  font-family: "Frank", "SpaceGrotesk" !important;
+  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #404040;
+  background: #f8f8f8;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.loginBox {
+  margin: auto;
+  background: white;
+  width: 1000px;
+  height: 400px;
+  max-width: 100%;
+}
+
+.loginLogo {
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+#homeH1 {
+  width: 80%;
+}
+
+button.login {
+  text-align: left;
+  font-family: "Open Sans", "SpaceGrotesk" !important;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #4267b2;
+  border-radius: 3;
+  border: 1px solid white;
+  padding: 10px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+button.login:hover {
+  color: #4267b2;
+  background-color: white;
+  border: 1px solid #4267b2;
+}
+
+button.google-login {
+  border: 1px solid white !important;
+}
+
+button.google-login:hover {
+  background-color: white !important;
+  border: 1px solid #4285f4 !important;
+  color: #4285f4;
+}
+
+a.logout {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+a.logout:hover {
+  text-decoration: none;
+}
+
+.form-label {
+  font-family: "Gothic A1", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.delete-button {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.delete-button:hover {
+  background: white !important;
+  color: black !important;
+}
+
+.save-button {
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 0 !important;
+  background-color: #804eec !important;
+  border-color: #804eec !important;
+  letter-spacing: 0.1em;
+}
+
+.save-button:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.cancel-button {
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 0 !important;
+  color: black !important;
+  background-color: white !important;
+  border-color: #804eec !important;
+  letter-spacing: 0.1em;
+}
+
+.cancel-button:hover {
+  background-color: #804eec !important;
+  color: white !important;
+}
+
+.success-message {
+  color: #79d481;
+}
+
+.success {
+  fill: #79d481;
+}
+
+.successFill {
+  fill: #79d481;
+  opacity: 10%;
+}
+
+.error {
+  color: #ff556a;
+}
+
+.failure {
+  fill: #ff556a;
+}
+
+.failureFill {
+  fill: #ff556a;
+  opacity: 10%;
+}
+
+.nothingFill {
+  fill: #fff;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  font-family: "Gothic A1", sans-serif;
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+a {
+  color: gray !important;
+}
+.footer-title {
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.subtitle,
+.startValue {
+  fill: black;
+}
+
+.title {
+  font-family: "Gothic A1", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.axis {
+  font-family: "Gothic A1", sans-serif;
+}
+
+.chart {
+  background-color: #ffffff;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.y-axis-cover,
+.y-axis-cover-right {
+  fill: #ffffff;
+}
+
+.small-chart {
+  transition: filter 0.5s ease-in-out;
+}
+
+.small-chart:hover,
+.small-chart-hover {
+  filter: blur(4px);
+}
+
+.green-dot {
+  height: 5px;
+  width: 5px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.percentageChange {
+  font-size: 26px;
+}
+
+.legend {
+  font-family: "Gothic A1", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.timeFilter {
+  fill: #bfbfbf;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.timeFilterRect {
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+.timeFilterRect.selected {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.timeFilter.selected,
+.absoluteRelativeFilter.selected {
+  color: #804eec;
+}
+
+.absoluteRelativeFilter {
+  padding-left: 15px;
+  padding-right: 15px;
+  fill: #ff556a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .text-center-xs {
+    text-align: center !important;
+  }
+
+  .text-left-xs {
+    text-align: left !important;
+  }
+  .blankColumn {
+    display: none !important;
+  }
+  .navigationFooter {
+    margin-top: 10px;
+  }
+}
