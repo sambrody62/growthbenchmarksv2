@@ -1,0 +1,103 @@
+# GrowthBenchmarks .gitignore
+
+# ===============================
+# Environment & Secrets
+# ===============================
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+*.env
+
+# Firebase/Google credentials
+firebase-private-key.json
+*-private-key.json
+*.pem
+credentials.json
+service-account*.json
+
+# ===============================
+# API / Python
+# ===============================
+api/.env
+api/*.env
+api/fathom/firebase-private-key.json
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+venv/
+ENV/
+env/
+.venv/
+
+# ===============================
+# Node / React
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Build outputs
+build/
+dist/
+.next/
+out/
+
+# ===============================
+# IDE / Editor
+# ===============================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Logs & Debug
+# ===============================
+logs/
+*.log
+debug.log
+
+# ===============================
+# Testing
+# ===============================
+coverage/
+.nyc_output/
+
+# ===============================
+# Misc
+# ===============================
+.cache/
+tmp/
+temp/
+*.bak
+*.backup
