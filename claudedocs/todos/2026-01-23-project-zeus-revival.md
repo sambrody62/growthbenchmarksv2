@@ -14,10 +14,10 @@
 **Risk Level**: HIGH - Exposed secrets, overdue compliance deadline
 
 ### Facebook Data Use Checkup (Manual)
-- [ ] **P0.1**: Complete Facebook Data Use Checkup recertification
+- [x] **P0.1**: Complete Facebook Data Use Checkup recertification ✅ *Completed 2026-02-03*
   - **URL**: https://developers.facebook.com/apps/506749186452843/data-use-checkup/
   - **AC**: Recertification submitted, API access restored
-  - **Notes**: Deadline was Jan 20, 2026 - already overdue
+  - **Notes**: Registered with Facebook, compliance complete
 
 ### Security Remediation
 - [x] **P0.2**: Create comprehensive .gitignore ✅ *Completed 2026-01-29*
